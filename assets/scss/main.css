@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "FaktPro-Normal";
+  src: url("../fonts/FaktPro/FaktPro-Normal.otf") format("opentype"); }
+@font-face {
+  font-family: "FaktPro-NormalItalic";
+  src: url("../fonts/FaktPro/FaktPro-NormalItalic.otf") format("opentype"); }
+@font-face {
+  font-family: "FaktPro-Blond";
+  src: url("../fonts/FaktPro/FaktPro-Blond.otf") format("opentype"); }
+.bg-light-yellow {
+  background-color: #FFEDD1; }
+
+.text-white {
+  color: #fff; }
+
+.text-black {
+  color: #000; }
+
+.text-grey {
+  color: #555; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+
+.h1:not(.fas, .far, .fal, .fad, .fab), .h2:not(.fas, .far, .fal, .fad, .fab), .h3:not(.fas, .far, .fal, .fad, .fab), .h4:not(.fas, .far, .fal, .fad, .fab), .h5:not(.fas, .far, .fal, .fad, .fab), .h6:not(.fas, .far, .fal, .fad, .fab), h1:not(.fas, .far, .fal, .fad, .fab), h2:not(.fas, .far, .fal, .fad, .fab), h3:not(.fas, .far, .fal, .fad, .fab), h4:not(.fas, .far, .fal, .fad, .fab), h5:not(.fas, .far, .fal, .fad, .fab), h6:not(.fas, .far, .fal, .fad, .fab) {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ul:last-child {
+  margin-bottom: 0; }
+
+.block {
+  width: 100%;
+  padding: 2rem; }
+  @media (min-width: 768px) {
+    .block {
+      padding: 3rem; }
+      .block.small {
+        padding: 2rem; } }
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: none; } }
+
+/*# sourceMappingURL=main.css.map */

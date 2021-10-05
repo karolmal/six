@@ -1,0 +1,302 @@
+@import "carousel.scss";
+
+@font-face {
+    font-family: "FaktPro-Normal";
+    src: url("../fonts/FaktPro/FaktPro-Normal.otf") format("opentype");
+  }
+
+@font-face {
+    font-family: "FaktPro-NormalItalic";
+    src: url("../fonts/FaktPro/FaktPro-NormalItalic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "FaktPro-Blond";
+    src: url("../fonts/FaktPro/FaktPro-Blond.otf") format("opentype");
+}
+
+// colours
+
+$white: #fff;
+$light-yellow: #FFEDD1;
+$black: #000;
+$grey: #555;
+
+.bg-light-yellow { background-color: $light-yellow;}
+
+
+//text
+
+.text-white { color: $white; }
+.text-black { color: $black; }
+.text-grey { color: $grey; }
+
+
+// Main Styles
+
+* {
+    -webkit-font-smoothing: antialiased;
+  
+    -moz-osx-font-smoothing: grayscale;
+  
+    margin: 0;
+  
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+$small-spacing: 0.7rem;
+$large-spacing: 2.5rem;
+
+
+// Typography 
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    
+    &:not(.fas, .far, .fal, .fad, .fab) {
+    
+        font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+        
+    }
+
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, ul {
+    
+    &:last-child { margin-bottom: 0; }
+    
+}
+
+p {
+    font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0px;
+    // color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+h1 {
+    line-height: 100px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+}
+
+
+// Page Structure
+
+.block {
+    
+    width: 100%;
+    padding: $small-spacing;
+    
+    @media (min-width: 968px) {
+        
+        padding: $large-spacing;
+        
+        &.small { padding: $small-spacing; }
+        
+    }
+
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.container {
+    
+    @media (max-width: 991.98px) {
+        
+        max-width: none;
+        
+    }
+    
+}
+
+//latest
+
+#latest {
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    h2 {
+
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+        color: #000;
+        padding: 5rem 0;
+        
+        }
+
+} 
+
+.card-carousel {
+
+    display: flex;
+    overflow-x: scroll;
+
+    .card {
+
+      display: flex; 
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 2rem;
+
+      img {
+
+        height: 400px;
+        width: auto;
+        object-fit: cover;
+        margin-bottom: 1rem;
+
+      }
+
+    }
+
+  }
+
+  .name, .date {
+
+    font-size: 25px;
+    line-height: 35px;
+    color: #000;
+
+  }
+
+  .date {
+
+    font-family: 'FaktPro-Blond', 'Roboto Condensed', sans-serif;
+
+  }
+
+  .price {
+
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+    color: #000;
+
+  }
+
+
+  // gallery grid
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-6 {width: 50%;}
+  .col-12 {width: 100%;}
+
+  [class*="col-"] {
+    padding: 10px;
+  }
+
+  @media only screen and (min-width: 768px) {
+
+
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-6 {width: 50%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  #gallery {
+
+    padding: 0 8px;
+
+    @media (min-width: 968px) {
+        
+      padding: 0 20px;
+      
+  }
+
+
+    .info {
+      margin: 1rem 0;
+    }
+
+    h2 {
+
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+        color: #000;
+        padding: 5rem 0;
+        
+        }
+
+} 
+
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+ .first{
+    position: relative;
+
+    .top-left {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+  } 
+
+  .gallery-card {
+
+    .post__tag {
+      font-size: 25px;
+      line-height: 35px;
+      font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+      color: #fff;
+  }
+  
+  
+    .post__published {
+      font-size: 50px;
+      line-height: 55px;
+      font-family: 'FaktPro-Normal', 'Roboto Condensed', sans-serif;
+      color: #fff;
+    }
+
+  }
+
+
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
